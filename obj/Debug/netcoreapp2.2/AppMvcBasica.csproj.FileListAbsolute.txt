@@ -38,3 +38,4 @@ C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\Razor\Views\Fornece
 C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\Razor\Views\Fornecedores\Details.cshtml.g.cs
 C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\Razor\Views\Fornecedores\Edit.cshtml.g.cs
 C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\Razor\Views\Fornecedores\Index.cshtml.g.cs
+C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\Razor\Views\Fornecedores\_Endereco.cshtml.g.cs
