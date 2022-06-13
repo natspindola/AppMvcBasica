@@ -33,3 +33,8 @@ C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\AppMvcBasica.dll
 C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\AppMvcBasica.pdb
 C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\AppMvcBasica.genruntimeconfig.cache
 C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\AppMvcBasica.csproj.CopyComplete
+C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\Razor\Views\Fornecedores\Create.cshtml.g.cs
+C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\Razor\Views\Fornecedores\Delete.cshtml.g.cs
+C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\Razor\Views\Fornecedores\Details.cshtml.g.cs
+C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\Razor\Views\Fornecedores\Edit.cshtml.g.cs
+C:\dev\Desenvolvedor.IO\AppMvcBasica\obj\Debug\netcoreapp2.2\Razor\Views\Fornecedores\Index.cshtml.g.cs
