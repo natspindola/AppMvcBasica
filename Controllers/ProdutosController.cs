@@ -48,9 +48,9 @@ namespace AppMvcBasica.Controllers
         // GET: Produtos/Create
         public IActionResult Create()
         {
-            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Documento"); //transporte da controller para a view, só dura um request
-            ViewBag.FornecedorId = new SelectList(_context.Fornecedores, dataValueField: "Id", dataTextField: "Documento"); //está dentro do viewData
-            TempData["FornecedorId"] = new SelectList(_context.Fornecedores, dataValueField: "Id", dataTextField: "Documento"); //passa de uma controller para outra e depois para a view, usada para redirecionamentos
+            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Nome"); //transporte da controller para a view, só dura um request
+            //ViewBag.FornecedorId = new SelectList(_context.Fornecedores, dataValueField: "Id", dataTextField: "Documento"); //está dentro do viewData
+            //TempData["FornecedorId"] = new SelectList(_context.Fornecedores, dataValueField: "Id", dataTextField: "Documento"); //passa de uma controller para outra e depois para a view, usada para redirecionamentos
             return View();
         }
 
@@ -59,16 +59,15 @@ namespace AppMvcBasica.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FornecedorId,Nome,Descricao,Imagem,Valor,DataCadastro,Ativo,Id")] Produto produto)
+        public async Task<IActionResult> Create(Produto produto)
         {
             if (ModelState.IsValid)
             {
-                produto.Id = Guid.NewGuid();
                 _context.Add(produto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Documento", produto.FornecedorId);
+            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Nome", produto.FornecedorId);
             return View(produto);
         }
 
@@ -85,7 +84,7 @@ namespace AppMvcBasica.Controllers
             {
                 return NotFound();
             }
-            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Documento", produto.FornecedorId);
+            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Nome", produto.FornecedorId);
             return View(produto);
         }
 
@@ -94,7 +93,7 @@ namespace AppMvcBasica.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("FornecedorId,Nome,Descricao,Imagem,Valor,DataCadastro,Ativo,Id")] Produto produto)
+        public async Task<IActionResult> Edit(Guid id, Produto produto)
         {
             if (id != produto.Id)
             {
@@ -121,7 +120,7 @@ namespace AppMvcBasica.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Documento", produto.FornecedorId);
+            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Nome", produto.FornecedorId);
             return View(produto);
         }
 
